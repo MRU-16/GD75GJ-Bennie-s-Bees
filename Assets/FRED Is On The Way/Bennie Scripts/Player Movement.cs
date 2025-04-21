@@ -1,16 +1,31 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public Rigidbody rb;
+    public float moveSpeed;
+    private Vector2 _moveDirection;
+
+    public InputActionReference move;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        _moveDirection = move.action.ReadValue<Vector2>();
+
     }
+
+
+    private void FixedUpdate()
+    {
+        rb.linearVelocity = new Vector3(_moveDirection.x * moveSpeed, 0 ,_moveDirection.y * moveSpeed);
+    }
+
+
 }
