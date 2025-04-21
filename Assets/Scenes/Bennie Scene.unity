@@ -1141,6 +1141,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1219978452992365585, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219978452992365585, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: f6c6ccb2-f7c3-4ac0-a2c2-4a70ad18d931
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219978452992365585, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 82e8ba6a-f9be-453e-befd-7e35ead48470
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219978452992365585, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 18ee1195-f45b-4f76-8a6c-39df54c44bce
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219978452992365585, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: 'Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219978452992365585, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: 'Gameplay/Look[/Mouse/delta]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219978452992365585, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: 'Gameplay/Jump[/Keyboard/space]'
+      objectReference: {fileID: 0}
     - target: {fileID: 2972193554254216814, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
       propertyPath: head
       value: 
@@ -1211,8 +1239,38 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7452552245044608517, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1927662507}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5544738622623722214, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1679974778918952960}
   m_SourcePrefab: {fileID: 100100000, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+--- !u!1 &1679974778918952959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5544738622623722214, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+  m_PrefabInstance: {fileID: 1679974778918952958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1679974778918952960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679974778918952959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621e2365c3ba6cc418e50b833d534af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactorSource: {fileID: 1679974778918952961}
+  interactRange: 15
+  InteractableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!4 &1679974778918952961 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8171085824158715198, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+  m_PrefabInstance: {fileID: 1679974778918952958}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
