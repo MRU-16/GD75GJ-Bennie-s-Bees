@@ -142,6 +142,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5221050347952509730}
+  - {fileID: 3738227582984286464}
   m_Father: {fileID: 8171085824158715198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &199937842904428827
@@ -245,7 +246,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!1 &5544738622623722214
 GameObject:
@@ -258,6 +259,7 @@ GameObject:
   - component: {fileID: 8171085824158715198}
   - component: {fileID: 1219978452992365585}
   - component: {fileID: 2972193554254216814}
+  - component: {fileID: 3764290688000715569}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -320,12 +322,16 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 6a09b475-63f5-4414-b6d5-ed75603165a1
-    m_ActionName: 'Gameplay/Fire[/Keyboard/f]'
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: f6c6ccb2-f7c3-4ac0-a2c2-4a70ad18d931
     m_ActionName: 'Gameplay/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 82e8ba6a-f9be-453e-befd-7e35ead48470
+    m_ActionName: 'Gameplay/Look[/Mouse/delta]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 18ee1195-f45b-4f76-8a6c-39df54c44bce
+    m_ActionName: 'Gameplay/Jump[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Gameplay
@@ -344,5 +350,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4186405787553798397}
-  moveSpeed: 10
+  moveSpeed: 5
+  sensitivity: 100000
   move: {fileID: -3294792642312014833, guid: 703806b711abbe648a88550fb5ef4c36, type: 3}
+  look: {fileID: 2606246567325080415, guid: 703806b711abbe648a88550fb5ef4c36, type: 3}
+  head: {fileID: 7559235190452741081}
+--- !u!114 &3764290688000715569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544738622623722214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621e2365c3ba6cc418e50b833d534af1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactorSource: {fileID: 8171085824158715198}
+  interactRange: 15
+  InteractableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!1 &7559235190452741081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3738227582984286464}
+  m_Layer: 0
+  m_Name: Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3738227582984286464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559235190452741081}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7452552245044608517}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
