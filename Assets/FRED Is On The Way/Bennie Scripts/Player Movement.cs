@@ -23,8 +23,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _moveDirection = move.action.ReadValue<Vector2>();
         _lookDirection = look.action.ReadValue<Vector2>();
-        transform.rotation = head.transform.rotation;
-
+        Vector3 BodyRotation = transform.rotation.eulerAngles;
+        BodyRotation = new Vector3(transform.rotation.x, transform.rotation.y, transform.rotation.z);
 
     }
 
