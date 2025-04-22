@@ -98,8 +98,9 @@ GameObject:
   - component: {fileID: 5150303599234971489}
   - component: {fileID: 7938346080022487521}
   - component: {fileID: 5820551163513102071}
-  - component: {fileID: 1749701473471440932}
   - component: {fileID: 2212241148927960050}
+  - component: {fileID: 6752242162193378821}
+  - component: {fileID: 6095871288879418223}
   m_Layer: 0
   m_Name: Fred-Test
   m_TagString: Untagged
@@ -160,8 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ff192896abf0147bed746f5816b025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tragetObj: {fileID: 0}
-  FredSpeed: 5
+  _target: {fileID: 6095871288879418223}
+  <Vision>k__BackingField: {fileID: 6752242162193378821}
+  _waypointReachedDistance: 1
+  _wanderSpeedMultiplier: 0.5
 --- !u!54 &5820551163513102071
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -189,20 +192,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1749701473471440932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4506048664134844753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 243bf49d8360341439dad715e1dd269e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 2212241148927960050}
-  player: {fileID: 0}
 --- !u!195 &2212241148927960050
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -225,6 +214,41 @@ NavMeshAgent:
   m_BaseOffset: 0.99
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6752242162193378821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506048664134844753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fa0c4f9ba2e944daa9120ab1ee9623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FOV: 90
+  _range: 5
+  _head: {fileID: 1976957116613051182}
+  _occlusionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _visibilityMask:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!114 &6095871288879418223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506048664134844753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73fd5d58223f41f4c8814b528cb7ce58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Team>k__BackingField: 0
+  <IsTargetable>k__BackingField: 0
 --- !u!1 &5361570494620850300
 GameObject:
   m_ObjectHideFlags: 0
