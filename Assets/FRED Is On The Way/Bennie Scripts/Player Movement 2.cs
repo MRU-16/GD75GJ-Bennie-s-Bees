@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement2 : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10;
-    [SerializeField] private float jumpForce = 10;
+    [SerializeField] private float jumpForce = 5;
     [SerializeField] bool canJump = true;
     [SerializeField] bool isGrounded = true;
     [SerializeField] private Transform _cam;
