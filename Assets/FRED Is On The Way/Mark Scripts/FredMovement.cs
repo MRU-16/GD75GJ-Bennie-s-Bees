@@ -10,6 +10,9 @@ public class FredMovement : MonoBehaviour
     [SerializeField] private float _waypointReachedDistance = 20f;
     [SerializeField] private float _patrolSpeedMultiplier = 5f;
     private Rigidbody _rigidbody;
+    [SerializeField] private float killDistance = 10f;
+    [SerializeField] private GameObject player;
+    [SerializeField] private BoxCollider _collider;
 
     private NavMeshAgent enemy;
 
