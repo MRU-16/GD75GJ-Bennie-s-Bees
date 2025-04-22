@@ -8,6 +8,7 @@ public class FredMovement : MonoBehaviour
     [SerializeField] private Targets _target;
     [field: SerializeField] public FredEyes Vision { get; private set; }
     [SerializeField] private float _waypointReachedDistance = 20f;
+    [SerializeField] private float _patrolSpeedMultiplier = 5f;
     private Rigidbody _rigidbody;
 
     private NavMeshAgent enemy;
@@ -55,6 +56,24 @@ public class FredMovement : MonoBehaviour
 
         int randomIndex = Random.Range(0, _waypoints.Length); 
         return _waypoints[randomIndex];
+    }
+
+    private IEnumerator WanderState()
+    {
+        PatrolPoints patrolpoint = null;
+        enemy.speed = _patrolSpeedMultiplier;
+
+        // wander until valid target is spotted, then attack
+        while (!IsTargetValid)
+        {
+            TryFindTarget();
+
+            // find waypoint to move to
+            if (patrolpoint == null || Vector3.Distance(patrolpoint.Position, transform.position) < _waypointReachedDistance) patrolpoint = FindRandomPatrolPoints();
+            else enemy.SetDestination(patrolpoint.Position);
+
+            yield return null;
+        }
     }
 
     private IEnumerator PatrolState()
