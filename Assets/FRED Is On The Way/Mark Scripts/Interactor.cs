@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 interface IInteractable 
@@ -7,23 +8,60 @@ interface IInteractable
 
 public class Interactor : MonoBehaviour
 {
-    public Transform interactorSource;
-    [SerializeField] private float interactRange;
-    [SerializeField] private LayerMask InteractableLayer;
+    [SerializeField] public float playerReach = 3f;
+    Interactables currentInteractable;
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null) 
+        { 
+            currentInteractable.Interact();
+        }
+    }
+
+    void CheckInteraction()
+    {
+        RaycastHit hit;
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+
+        //if colliders with anything within player reach
+        if (Physics.Raycast(ray, out hit, playerReach))
         {
-            Ray r = new Ray(interactorSource.position, interactorSource.forward);
-            if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange, InteractableLayer)) 
-            { 
-                if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable interactObj)) 
+            if (hit.collider.tag == "Interactable")
+            {
+                Interactables newInteractable = hit.collider.GetComponent<Interactables>();
+
+                if (newInteractable.enabled)
                 {
-                    interactObj.Interact();
+                    setNewCurrentInteractable(newInteractable);
+                }
+                else
+                {
+                    DisableCurrentInteractable();
                 }
             }
+            else
+            {
+                DisableCurrentInteractable();
+            }
+        }
+        else
+        {
+            DisableCurrentInteractable();
+        }
+    }
+    private void setNewCurrentInteractable(Interactables newInteractable)
+    {
+        currentInteractable = newInteractable;
+        currentInteractable.EnableOutline();
+    }
+
+    private void DisableCurrentInteractable()
+    {
+        if (currentInteractable)
+        {
+            currentInteractable.DisableOutline();
+            currentInteractable = null;
         }
     }
 }

@@ -5,6 +5,7 @@ public class FredNavMeshAgent : MonoBehaviour
 {
     [SerializeField] public NavMeshAgent enemy;
     [SerializeField] public Transform player;
+    [SerializeField] public Transform target;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +15,11 @@ public class FredNavMeshAgent : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        FollowPlayer();
+    }
+
+    void FollowPlayer() 
     {
         enemy.SetDestination(player.position);
     }
