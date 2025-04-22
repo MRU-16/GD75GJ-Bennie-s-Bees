@@ -387,6 +387,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6976498182646456562, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: _rb
+      value: 
+      objectReference: {fileID: 7853801992703502379}
+    - target: {fileID: 6976498182646456562, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
       propertyPath: _cam
       value: 
       objectReference: {fileID: 6875619389461182631}
@@ -443,5 +447,10 @@ Transform:
 --- !u!4 &2847068729242926568 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8171085824158715198, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+  m_PrefabInstance: {fileID: 6262069116695245014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &7853801992703502379 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4186405787553798397, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
   m_PrefabInstance: {fileID: 6262069116695245014}
   m_PrefabAsset: {fileID: 0}
