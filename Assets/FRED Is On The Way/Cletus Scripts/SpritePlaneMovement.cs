@@ -23,10 +23,9 @@ public class SpritePlaneMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(seconds);
             transform.localScale = new Vector3(transform.localScale.x * 1, transform.localScale.y, transform.localScale.z);
-            Debug.Log(1);
             yield return new WaitForSeconds(seconds);
             transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
-            Debug.Log(2);
+           
         }
     }
 }
