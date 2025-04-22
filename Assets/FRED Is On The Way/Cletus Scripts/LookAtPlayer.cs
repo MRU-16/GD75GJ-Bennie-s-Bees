@@ -5,10 +5,7 @@ public class LookAtPlayer : MonoBehaviour
     public GameObject Player;
     [SerializeField]
     private float FixedRotation = 1;
-    void Start()
-    {
-        
-    }
+   
     // Update is called once per frame
     void Update()
     {
