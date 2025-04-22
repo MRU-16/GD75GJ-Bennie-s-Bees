@@ -38,12 +38,18 @@ public class FredEyes : MonoBehaviour
 
         foreach (Collider hit in hits)
         {
-            if (hit.gameObject == gameObject) continue;                              // skip ourselves
-            if (!hit.TryGetComponent(out Targets target)) continue;               // skip objects without Targetable
-            if (target.Team == team) continue;                                       // skip allies
-            if (!target.IsTargetable) continue;                                      // skip not targetable
-            if (!TestVisibility(target.transform.position + Vector3.up)) continue;   // skip not visible, checking 1m up to ensure check doesn't hit ground
-
+            if (hit.gameObject == gameObject)
+            {
+                Debug.Log("Test 1");
+                continue;
+            }                         // skip ourselves
+            if (!hit.TryGetComponent(out Targets target))
+            {
+                Debug.Log("Test 2");
+                Debug.Log(hit.gameObject.name);
+                continue;
+            }
+             // skip not targetable                                   // skip not targetable
             // all tests passed, add target to list
             targets.Add(target);
         }
