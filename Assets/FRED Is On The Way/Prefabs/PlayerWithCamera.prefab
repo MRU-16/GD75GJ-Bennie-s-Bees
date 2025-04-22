@@ -418,6 +418,22 @@ PrefabInstance:
       propertyPath: jumpForce
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7411592997273505913, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_Height
+      value: 2.1870747
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411592997273505913, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_Radius
+      value: 0.66843224
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411592997273505913, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_Center.y
+      value: 0.09353733
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411592997273505913, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
+      propertyPath: m_Center.z
+      value: 0.02054882
+      objectReference: {fileID: 0}
     - target: {fileID: 7917591026753424939, guid: f37cc37a65400aa4b9b319ff8da51f2b, type: 3}
       propertyPath: m_Layer
       value: 6
