@@ -920,4 +920,4 @@ MonoBehaviour:
   LightTime: 100
   MaxLightTime: 100
   LightCost: 10
-  RechargeTime: 0
+  RechargeTime: 5
