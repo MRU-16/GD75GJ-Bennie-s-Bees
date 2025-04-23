@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class TriggerVolumeInteract : MonoBehaviour
 {
+    [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] private bool inTrigger = false;
+    private bool disableScript = false;
+    private bool triggerAction = true;
 
-    [SerializeField] public bool inTrigger = false;
 
 
     void Start()
@@ -14,20 +17,33 @@ public class TriggerVolumeInteract : MonoBehaviour
 
     void Update()
     {
-        
+        if (inTrigger && Input.GetKey(KeyCode.E) && (disableScript == false))
+        {
+            Debug.Log("You pressed E and it worked!");
+            playerMovement.questPoints = playerMovement.questPoints + 1;
+            disableScript = true;
+        }
+;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player") 
+        Debug.Log("You're in the trigger volume!!!!!!!@!!!!!@#$@#@#$$#@@#$@$");
+        if (other.gameObject.tag == "Player") 
+
         {
+
             inTrigger = true;
+            Debug.Log(inTrigger);
         }
 
-        else
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
         {
             inTrigger = false;
+            Debug.Log(inTrigger);
         }
-}
-        
+    }
 }

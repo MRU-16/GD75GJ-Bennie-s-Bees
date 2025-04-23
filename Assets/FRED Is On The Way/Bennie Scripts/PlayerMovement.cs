@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement2 : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10;
     [SerializeField] private float jumpForce = 5;
@@ -8,6 +8,7 @@ public class PlayerMovement2 : MonoBehaviour
     [SerializeField] bool isGrounded = true;
     [SerializeField] private Transform _cam;
     [SerializeField] Rigidbody _rb;
+    [SerializeField] public int questPoints = 0;
     void Start()
     {
         Cursor.visible = false;
