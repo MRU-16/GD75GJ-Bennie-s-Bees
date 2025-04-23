@@ -21,7 +21,7 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.tag == "Fred")
         {
-            Debug.Log("FRED HIT YOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU!");
+            //Debug.Log("FRED HIT YOUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU!");
             Death();
 
         }

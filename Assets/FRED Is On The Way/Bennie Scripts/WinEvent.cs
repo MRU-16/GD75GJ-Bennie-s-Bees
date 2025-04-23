@@ -15,7 +15,7 @@ public class WinEvent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerMovement.memoryPoints > 1)
+        if (playerMovement.memoryPoints > 5)
         {
             Win();
         }
