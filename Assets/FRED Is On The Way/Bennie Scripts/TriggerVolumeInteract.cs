@@ -29,7 +29,16 @@ public class TriggerVolumeInteract : MonoBehaviour
                 Interacted.Invoke();
 
             }
-;
+            if (inTrigger && Input.GetKey(KeyCode.E) && (disableScript == true)) ;
+            {
+
+                Debug.Log("You pressed E and it worked!");
+                playerMovement.questPoints = playerMovement.questPoints + 1;
+                disableScript = true;
+                Interacted.Invoke();
+
+            }
+            //check player layer to hidden
         }
         if (inTrigger == false)
         {

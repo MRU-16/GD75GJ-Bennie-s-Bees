@@ -20,6 +20,11 @@ public class LockerHide : MonoBehaviour
         PlayerOBJ.SetActive(false);
         Player.position = destination.position;
         PlayerOBJ.SetActive(true);
+
+        Player.gameObject.layer = LayerMask.NameToLayer("Hiding");
+        
+        //set player speed to zero
+
     }
 
 
