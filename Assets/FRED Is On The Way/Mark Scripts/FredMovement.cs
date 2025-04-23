@@ -129,10 +129,10 @@ public class FredMovement : MonoBehaviour
                 Debug.DrawLine(transform.position, TargetPosition, Color.red);
             }
 
-            if (playerPrefab.isHiding)
+            /*if (playerPrefab.isHiding)
             {
                 ChangeState(PatrolState());
-            }
+            }*/
 
             yield return null;
         }
