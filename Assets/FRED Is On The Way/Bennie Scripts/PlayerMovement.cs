@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] bool isGrounded = true;
     [SerializeField] private Transform _cam;
     [SerializeField] Rigidbody _rb;
-    [SerializeField] public int questPoints = 0;
+    [SerializeField] public int memoryPoints = 0;
     void Start()
     {
         Cursor.visible = false;
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         // Second, to make sure movement adjusts based on where we're facing, convert input from local to world space
         Vector3 moveDirection = transform.TransformDirection(playerInput);
 
-        // Third, if we’re holding 2 keys (diagonal), our speed is 41% faster, so normalize to cap it at 1
+        // Third, if weï¿½re holding 2 keys (diagonal), our speed is 41% faster, so normalize to cap it at 1
         if (moveDirection.magnitude > 1)
         {
             moveDirection = moveDirection.normalized;
