@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TriggerVolumeInteract : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class TriggerVolumeInteract : MonoBehaviour
     private bool disableScript = false;
     private bool triggerAction = true;
 
-
+    [SerializeField] private UnityEvent Interacted;
 
     void Start()
     {

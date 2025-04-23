@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53bd55509706e604d98a47746f3fefa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement2: {fileID: 0}
+  playerMovement: {fileID: 0}
   inTrigger: 0
