@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.03, y: 0.015, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -121,5 +121,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53bd55509706e604d98a47746f3fefa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableNPC: {fileID: 0}
   playerMovement: {fileID: 0}
   inTrigger: 0
+  FredSpeedIncreaseMultiplier: 2
+  _Fred: {fileID: 0}
+  Interacted:
+    m_PersistentCalls:
+      m_Calls: []
