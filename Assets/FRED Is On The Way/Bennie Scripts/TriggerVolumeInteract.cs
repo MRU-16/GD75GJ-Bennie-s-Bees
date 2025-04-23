@@ -18,24 +18,35 @@ public class TriggerVolumeInteract : MonoBehaviour
 
     void Update()
     {
-        if (inTrigger && Input.GetKey(KeyCode.E) && (disableScript == false))
+        if (inTrigger == true)
         {
-            Debug.Log("You pressed E and it worked!");
-            playerMovement.questPoints = playerMovement.questPoints + 1;
-            disableScript = true;
-        }
+            if (inTrigger && Input.GetKey(KeyCode.E) && (disableScript == false))
+            {
+
+                Debug.Log("You pressed E and it worked!");
+                playerMovement.questPoints = playerMovement.questPoints + 1;
+                disableScript = true;
+                Interacted.Invoke();
+
+            }
 ;
+        }
+        if (inTrigger == false)
+        {
+            disableScript = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("You're in the trigger volume!!!!!!!@!!!!!@#$@#@#$$#@@#$@$");
+        
         if (other.gameObject.tag == "Player") 
 
         {
-
+            Debug.Log("You're in the trigger volume!!!!!!!@!!!!!@#$@#@#$$#@@#$@$");
             inTrigger = true;
             Debug.Log(inTrigger);
+           
         }
 
     }
@@ -45,6 +56,7 @@ public class TriggerVolumeInteract : MonoBehaviour
         {
             inTrigger = false;
             Debug.Log(inTrigger);
+            
         }
     }
 }
