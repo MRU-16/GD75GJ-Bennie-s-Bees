@@ -13,6 +13,7 @@ public class FredMovement : MonoBehaviour
     [SerializeField] private float killDistance = 10f;
     [SerializeField] private GameObject player;
     [SerializeField] private BoxCollider _collider;
+    [SerializeField] private PlayerMovement playerPrefab;
 
     private NavMeshAgent enemy;
 
@@ -127,9 +128,14 @@ public class FredMovement : MonoBehaviour
                 transform.LookAt(TargetPosition);
                 Debug.DrawLine(transform.position, TargetPosition, Color.red);
             }
+
+            if (playerPrefab.isHiding)
+            {
+                ChangeState(PatrolState());
+            }
+
             yield return null;
         }
         ChangeState(PatrolState());
     }
-
 }
