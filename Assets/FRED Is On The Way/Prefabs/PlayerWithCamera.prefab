@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828773709189440809}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.16650048, y: 0.4533234, z: 0.08662132, w: 0.8713624}
+  m_LocalRotation: {x: -0.20309365, y: 0.4332836, z: 0.10088385, w: 0.87226194}
   m_LocalPosition: {x: 0.00000023283064, y: 0.5, z: 0.32300046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   ReferenceFrame: 0
   RecenterTarget: 0
   PanAxis:
-    Value: 54.971115
+    Value: 52.83046
     Center: 0
     Range: {x: -180, y: 180}
     Wrap: 1
@@ -117,7 +117,7 @@ MonoBehaviour:
       Time: 2
     Restrictions: 0
   TiltAxis:
-    Value: -21.635431
+    Value: -26.21395
     Center: 0
     Range: {x: -70, y: 70}
     Wrap: 0
@@ -234,7 +234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5231447137928272265}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.16650048, y: 0.4533234, z: 0.08662132, w: 0.8713624}
+  m_LocalRotation: {x: -0.20309359, y: 0.43328363, z: 0.10088383, w: 0.87226194}
   m_LocalPosition: {x: 0.00000023283064, y: 0.5, z: 0.32300046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -430,15 +430,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6453728922474071226, guid: dcf618078a1b8cd42abce056e3b2eb93, type: 3}
       propertyPath: m_Range
-      value: 5
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453728922474071226, guid: dcf618078a1b8cd42abce056e3b2eb93, type: 3}
+      propertyPath: m_Intensity
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6453728922474071226, guid: dcf618078a1b8cd42abce056e3b2eb93, type: 3}
       propertyPath: m_SpotAngle
-      value: 106.5858
+      value: 49.438087
       objectReference: {fileID: 0}
     - target: {fileID: 6453728922474071226, guid: dcf618078a1b8cd42abce056e3b2eb93, type: 3}
       propertyPath: m_InnerSpotAngle
-      value: 70.230515
+      value: 23.311382
       objectReference: {fileID: 0}
     - target: {fileID: 6453728922474071226, guid: dcf618078a1b8cd42abce056e3b2eb93, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -446,11 +450,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6453728922474071226, guid: dcf618078a1b8cd42abce056e3b2eb93, type: 3}
       propertyPath: m_Shadows.m_Strength
-      value: 0.211
+      value: 0.181
       objectReference: {fileID: 0}
     - target: {fileID: 6453728922474071226, guid: dcf618078a1b8cd42abce056e3b2eb93, type: 3}
       propertyPath: m_Shadows.m_NearPlane
-      value: 0.66
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -795,5 +799,5 @@ MonoBehaviour:
   FlashLightBar: {fileID: 4495484637397881557}
   LightTime: 100
   MaxLightTime: 100
-  LightCost: 10
-  RechargeTime: 5
+  LightCost: 5
+  RechargeTime: 10
