@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform _cam;
     [SerializeField] Rigidbody _rb;
     [SerializeField] public int memoryPoints = 0;
+
+
+    public bool isHiding = false;
     void Start()
     {
         Cursor.visible = false;
