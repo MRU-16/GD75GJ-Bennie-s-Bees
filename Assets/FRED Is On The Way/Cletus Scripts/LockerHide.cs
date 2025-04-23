@@ -27,6 +27,16 @@ public class LockerHide : MonoBehaviour
 
     }
 
+    public void LockerExit()
+    {
+        PlayerOBJ.SetActive(false);
+        Player.position = destination.position;
+        PlayerOBJ.SetActive(true);
 
+        Player.gameObject.layer = LayerMask.NameToLayer("player");
+
+        //set player speed to zero
+
+    }
 
 }
